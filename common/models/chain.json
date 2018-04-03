@@ -1,0 +1,47 @@
+{
+  "name": "chain",
+  "plural": "chains",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "partnerId": {
+      "type": "string",
+      "required": true,
+      "id":true,
+      "generated": false
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "numberOfRestaurants": {
+      "type": "number"
+    },
+    "cuisines": {
+      "type": [
+        {
+          "id": "string",
+          "name": "string"
+        }
+      ]
+    },
+    "images": {
+      "type": [
+        "object"
+      ]
+    },
+    "primaryImage": {
+      "type": "object"
+    },
+    "description": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

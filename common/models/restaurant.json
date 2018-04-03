@@ -1,0 +1,88 @@
+{
+  "name": "restaurant",
+  "plural": "restaurants",
+  "base": "PersistedModel",
+  "excludeBaseProperties": ["id"],  
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "required": true
+    },
+    "name": {
+      "type": "string",
+      "required": true
+    },
+    "geo": {
+      "type": {
+        "type": "string",
+        "coordinates": "geopoint"
+      },
+      "required": true
+    },
+    "address": {
+      "type": "object"
+    },
+    "images": {
+      "type": [
+        {
+          "id": "string",
+          "href": "string"
+        }
+      ]
+    },
+    "primaryImage": {
+      "type": {
+          "id": "string",
+          "href": "string"
+      }
+    },
+    "cuisines": {
+      "type": [
+        {
+          "id": "string",
+          "name": "string"
+        }
+      ],
+      "required": true
+    },
+    "chain": {
+      "type": {
+          "partnerId": "string",
+          "name": "string"
+        },
+      "required": true
+    },
+    "website": {
+      "type": "string"
+    },
+    "bookingTelephone": {
+      "type": "string"
+    },
+    "bookingEmail": {
+      "type": "string"
+    },
+    "isBookingRequired": {
+      "type": "boolean",
+      "default": false
+    },
+    "isActive": {
+      "type": "boolean",
+      "default": true
+    },
+    "lastUpdated": {
+      "type": "string",
+      "required": true
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {},
+  "mongodb": {
+    "collection": "restaurants"
+  }
+}

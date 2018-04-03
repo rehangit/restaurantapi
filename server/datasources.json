@@ -1,0 +1,16 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "rewards-restaurants": {
+    "name": "rewards-restaurants",
+    "url": "mongodb://localhost:27017/restaurant",
+    "host": "localhost",
+    "port": 27017,
+    "database": "restaurant",
+    "password": "",
+    "user": "",
+    "connector": "mongodb"
+  }
+}
